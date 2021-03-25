@@ -1,5 +1,6 @@
 package com.codeup.springblog;
 
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 public class HelloController {
@@ -21,4 +22,12 @@ public class HelloController {
     public String addOne(@PathVariable int number) {
         return number + " plus one is " + (number + 1) + "!";
     }
+
+    @GetMapping("/hello/{name}")
+    public String sayHello(@PathVariable String name, Model model) {
+        model.addAttribute("name", name);
+        return "hello";
+    }
+
+
 }
