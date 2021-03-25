@@ -1,6 +1,7 @@
 package com.codeup.springblog;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 public class PostController {
@@ -11,5 +12,15 @@ public class PostController {
         return "All posts will display here!!";
     }
 
+    @GetMapping("/posts/create")
+    @ResponseBody
+    public String viewPostForm(){
+        return "You would come here to create a post.";
+    }
 
+    @PostMapping("/posts/create")
+    @ResponseBody
+    public String createPost(){
+        return "You will submit your post here.";
+    }
 }
