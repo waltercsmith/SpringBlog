@@ -17,15 +17,15 @@ public class HomeController {
 
     @GetMapping("/")
     @ResponseBody
-    public String hey(){
+    public String hello(){
         return "This is a landing page";
     }
 
 
 //    Returns a view
-    @GetMapping("/home")
-    public String welcome() {
-        return "home";
-    }
+//    @GetMapping("/home")
+//    public String welcome() {
+//        return "home";
+//    }
 
 }
