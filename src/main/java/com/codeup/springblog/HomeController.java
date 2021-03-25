@@ -13,11 +13,7 @@ public class HomeController {
 //    This defines what routes the controller responds to
 //    This code defines a controller that responds to the requests for "/hello"
 
-    @GetMapping("/hello")
-    @ResponseBody
-    public String hello(){
-        return "Hello from Spring";
-    }
+
 
     @GetMapping("/")
     @ResponseBody
