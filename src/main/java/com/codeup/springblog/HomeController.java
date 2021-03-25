@@ -25,4 +25,11 @@ public class HomeController {
         return "This is a landing page";
     }
 
+
+//    Returns a view
+    @GetMapping("/home")
+    public String welcome() {
+        return "home";
+    }
+
 }
