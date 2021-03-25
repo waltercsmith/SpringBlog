@@ -25,5 +25,10 @@ public class MathController {
     }
 
 
+    @GetMapping("/divide/{numOne}/by/{numTwo}")
+    @ResponseBody
+    public float divide(@PathVariable float numOne, @PathVariable float numTwo){
+        return numOne/numTwo;
+    }
 
 }
