@@ -12,11 +12,18 @@ public class MathController {
         return numOne + numTwo;
     }
 
+    @GetMapping("/multiply/{numOne}/and/{numTwo}")
+    @ResponseBody
+    public int product(@PathVariable int numOne, @PathVariable int numTwo){
+        return numTwo * numOne;
+    }
+
     @GetMapping("/subtract/{numOne}/from/{numTwo}")
     @ResponseBody
     public int subtract(@PathVariable int numOne, @PathVariable int numTwo){
         return numTwo - numOne;
     }
+
 
 
 }
