@@ -14,12 +14,12 @@ public class HomeController {
 //    This code defines a controller that responds to the requests for "/hello"
 
 
-//
-//    @GetMapping("/")
-//    @ResponseBody
-//    public String hello(){
-//        return "This is a landing page";
-//    }
+
+    @GetMapping("/")
+    @ResponseBody
+    public String hello(){
+        return "This is a landing page";
+    }
 
 
 //    Returns a view
@@ -27,6 +27,11 @@ public class HomeController {
     public String welcome() {
         return "home";
     }
+
+
+    @GetMapping("homepage")
+    public String homePage(){return "homepage";} // <--- THIS IS THE FOR THE HOME PAGE OF blogpost REMEMBER THAT
+
 
 
 

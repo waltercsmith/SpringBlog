@@ -17,6 +17,27 @@ public class BlogPost {
     @Column(nullable = false, length = 720)
     private String content;
 
+    public BlogPost() {
+
+    }
+
+    public BlogPost(long id) {
+        this.id = id;
+    }
+
+
+    public BlogPost(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
+    public BlogPost(long id, String title, String content) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+    }
+
+
 
 }
 
