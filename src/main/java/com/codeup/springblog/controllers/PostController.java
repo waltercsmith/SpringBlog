@@ -24,11 +24,16 @@ public class PostController {
     }
 //    Used dependency injection to use a instance of the new BlogPostRepository interface
 
+//    @GetMapping("/posts")
+//    @ResponseBody
+//    public String seeAllPosts(){
+//        return "All posts will display here!!";
+//    }
+
+
     @GetMapping("/posts")
-    @ResponseBody
-    public String seeAllPosts(){
-        return "All posts will display here!!";
-    }
+    public String viewAllPosts(){ return "posts/index"; } //    shows all the blogposts
+
 
     @GetMapping("/posts/create")
     @ResponseBody
