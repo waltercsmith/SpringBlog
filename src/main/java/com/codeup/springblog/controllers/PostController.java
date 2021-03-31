@@ -1,14 +1,20 @@
 package com.codeup.springblog.controllers;
+import com.codeup.springblog.models.Post;
+import com.codeup.springblog.models.User;
+import com.codeup.springblog.repo.PostRepository;
+//import com.codeup.springblog.repo.UserRepository;
 
 import com.codeup.springblog.models.BlogPost;
 import com.codeup.springblog.repo.BlogPostRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+//import org.springframework.web.bind.annotation.PathVariable;
+//import org.springframework.web.bind.annotation.PostMapping;
+//import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.List;
 @Controller
 public class PostController {
 
@@ -84,27 +90,27 @@ public class PostController {
 //    public String createPost(){
 //        return "You will submit your post here.";
 //    }
-private final PostRepository postDao;
-    private final UserRepository userDao;
-
-    public PostController(PostRepository postDao, UserRepository userDao){
-        this.userDao = userDao;
-        this.postDao = postDao;
-    }
+//private final PostRepository postDao;
+//    private final UserRepository userDao;
+//
+//    public PostController(PostRepository postDao, UserRepository userDao){
+//        this.userDao = userDao;
+//        this.postDao = postDao;
+//    }
 
     @GetMapping("/posts")
     public String seeAllPosts(Model viewModel){
-        List<Post> postsFromDB = postDao.findAll();
-        viewModel.addAttribute("posts", postsFromDB);
+//        List<Post> postsFromDB = postDao.findAll();
+//        viewModel.addAttribute("posts", postsFromDB);
         // do not use a / to reference a template
         return "posts/index";
     }
 
-    @GetMapping("/posts/{id}")
-    public String showOnePost(@PathVariable Long id, Model vModel){
-        vModel.addAttribute("post", postDao.getOne(id));
-        return "posts/show";
-    }
+//    @GetMapping("/posts/{id}")
+//    public String showOnePost(@PathVariable Long id, Model vModel){
+//        vModel.addAttribute("post", post);
+//        return "posts/show";
+//    }
 
     @GetMapping("/posts/create")
     public String viewPostForm(){
@@ -115,7 +121,7 @@ private final PostRepository postDao;
     @ResponseBody
     public String createPost(@RequestParam String post_title,@RequestParam(name = "post_body") String body){
         Post postToSave = new Post();
-        User userToAdd = userDao.getOne(2L);
+//        User userToAdd = userDao.getOne(2L);
 
         // Setting the title here
         postToSave.setTitle(post_title);
@@ -123,11 +129,11 @@ private final PostRepository postDao;
         // setting the body here
         postToSave.setBody(body);
 
-        // set the user
-        postToSave.setOwner(userToAdd);
-
-        // Now lets save our post;
-        postDao.save(postToSave);
+//        // set the user
+//        postToSave.setOwner(userToAdd);
+//
+//        // Now lets save our post;
+//        postDao.save(postToSave);
 
         return "You created a post!";
     }
