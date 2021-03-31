@@ -12,32 +12,32 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class PostController {
 
-    @GetMapping("/posts")
-    @ResponseBody
-    public String indexPage(){
-        return "posts index page";
-    }
-
-    @GetMapping("/posts/{id}")
-    @ResponseBody
-    public String indvidualPost(@PathVariable String id){
-
-        return "view an individual post";
-    }
-
-    @GetMapping("/posts/create")
-    @ResponseBody
-    public String viewCreatePostForm(){
-
-        return "view the form for creating a post";
-    }
-
-    @PostMapping("/posts")
-    @ResponseBody
-    public String createPost(){
-
-        return "create a new post";
-    }
+//    @GetMapping("/posts")
+//    @ResponseBody
+//    public String indexPage(){
+//        return "posts index page";
+//    }
+//
+//    @GetMapping("/posts/{id}")
+//    @ResponseBody
+//    public String indvidualPost(@PathVariable String id){
+//
+//        return "view an individual post";
+//    }
+//
+//    @GetMapping("/posts/create")
+//    @ResponseBody
+//    public String viewCreatePostForm(){
+//
+//        return "view the form for creating a post";
+//    }
+//
+//    @PostMapping("/posts")
+//    @ResponseBody
+//    public String createPost(){
+//
+//        return "create a new post";
+//    }
 
 
 //    private final BlogPostRepository blogDao;

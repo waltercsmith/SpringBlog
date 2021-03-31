@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
 @Controller
 public class HelloController {
 
@@ -34,8 +36,21 @@ public class HelloController {
 
     @GetMapping("/hello/{name}")
     public String sayHello(@PathVariable String name, Model model){
-        model.addAttribute("name", name);
+//        model.addAttribute("name", name);
+
+        List<String> names = new ArrayList<>();
+
+        names.add("Sam");
+        names.add("Dorian");
+        names.add("Diego");
+
+        model.addAttribute("aName", name.toUpperCase());
+        model.addAttribute("admin", name.equals("fer"));
+        model.addAttribute("nameList", names);
+
         return "hello";
+
+
     }
 
     @GetMapping("/join")
