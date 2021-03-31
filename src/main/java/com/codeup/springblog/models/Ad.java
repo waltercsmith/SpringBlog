@@ -40,19 +40,19 @@ public class Ad {
 
     public Ad(Long id, String title, String description) {
         Id = id;
-        Title = title;
-        Description = description;
+        title = title;
+        description = description;
     }
 
     public Ad(String title, String description, User owner) {
-        Title = title;
-        Description = description;
+        title = title;
+        description = description;
         this.owner = owner;
     }
 
     public Ad(String title, String description) {
-        Title = title;
-        Description = description;
+        title = title;
+        description = description;
     }
 
     public Long getId() {
@@ -64,19 +64,19 @@ public class Ad {
     }
 
     public String getTitle() {
-        return Title;
+        return titles;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        title = title;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        description = description;
     }
 
     public User getOwner() {
