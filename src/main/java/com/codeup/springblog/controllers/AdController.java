@@ -13,7 +13,14 @@ import java.util.List;
 
 @Controller
 
-public class AdController {
+public class AdController<EmailService> {
+
+    @Autowired
+    private final EmailService emailService;
+
+    public AdController(EmailService emailService) {
+        this.emailService = emailService;
+    }
 //    private final AdRepository adDao;
 //    private final UserRepository userDao;
 
@@ -47,7 +54,7 @@ public class AdController {
     @ResponseBody
     public String createAd(@ModelAttribute Ad ad){
 
-////        User user = userDao.getOne(1L);
+//        User user = userDao.getOne(1L);
 //
 //        ad.setOwner(user);
 //
@@ -56,6 +63,9 @@ public class AdController {
 
         return "You created an ad.";
     }
+
+
+
 
 //    @GetMapping("/ads/{id}/update")
 //    public String updateAdForm(@PathVariable Long id, Model model){
