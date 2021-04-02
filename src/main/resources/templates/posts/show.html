@@ -4,17 +4,14 @@
 <body>
 
 <main class="container">
-<!--    <div class="post">-->
-<!--        <h1 th:text="${blogpost.title}"></h1>-->
-<!--        <p th:text="${blogpost.content}"></p>-->
-<!--    </div>-->
-
     <div class="post">
         <h1 th:text="${post.title}"></h1>
         <p th:text="${post.body}"></p>
-        <p>You can contact me at <a th:text="${post.owner.email}" th:href="${'mailto:' + post.owner.email}">here</a></p>
+        <!--        <p>You can contact me at <a th:text="${post.owner.email}" th:href="${'mailto:' + post.owner.email}">here</a></p>-->
     </div>
 </main>
+
+<p>Show</p>
 
 </body>
 </html>

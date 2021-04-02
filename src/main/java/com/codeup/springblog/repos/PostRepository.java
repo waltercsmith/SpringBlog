@@ -1,4 +1,4 @@
-package com.codeup.springblog.repo;
+package com.codeup.springblog.repos;
 
 import com.codeup.springblog.models.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,10 +9,8 @@ import java.util.List;
 
 public interface PostRepository extends JpaRepository<Post, Long> {
 
-    List<Post> findByTitle(String titleToSearchFor);
-
+    List<Post> findByTitleEquals(String titleToSearchFor);
 
     @Query("from Post post where post.body like %:term%")
     List<Post> searchByBodyLike(@Param("term") String term);
-
 }
