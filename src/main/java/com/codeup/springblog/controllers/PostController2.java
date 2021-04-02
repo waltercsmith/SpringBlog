@@ -7,7 +7,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
+
 public class PostController2 {
 
+
+    @GetMapping("/posts")
+    public String seeAllPosts(Model viewModel){
+//        List<Post> postsFromDB = postDao.searchByBodyLike("post");
+//        viewModel.addAttribute("posts", postsFromDB);
+        return "posts/index";
+    }
 
 }
