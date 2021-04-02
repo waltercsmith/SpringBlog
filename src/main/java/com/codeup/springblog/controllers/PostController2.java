@@ -20,4 +20,11 @@ public class PostController2 {
         return "posts/index";
     }
 
+
+    @GetMapping("/posts/{id}")
+    public String showOnePost(@PathVariable int id, Model vModel){
+        vModel.addAttribute("post", new Post("iPad", "Pro 11in"));
+        return "posts/show";
+    }
+
 }
