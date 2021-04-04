@@ -23,7 +23,12 @@ public class GuessNumberServlet {
 
 
 
+    @GetMapping("/roll-dice/{number}")
+    @ResponseBody
+    public String guessNumberDouble(@PathVariable double number){
 
+        return "The number you choose is: " + number;
+    }
 
 
 }
