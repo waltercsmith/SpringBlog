@@ -22,6 +22,12 @@ public class HomeController {
     }
 
 
+    @GetMapping("/hello/test")
+    @ResponseBody
+    public String hey() {
+        return "More text (testing purposes)";
+    }
+
 
 //    @GetMapping("hello")
 //    @ResponseBody
