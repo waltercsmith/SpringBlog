@@ -33,4 +33,10 @@ public class MathController {
         return numOne/numTwo;
     }
 
+    @GetMapping("/square/{numOne}")
+    @ResponseBody
+    public float square(@PathVariable float numOne){
+        return numOne * numOne;
+    }
+
 }
