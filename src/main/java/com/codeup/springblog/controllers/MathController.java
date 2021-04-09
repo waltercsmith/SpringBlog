@@ -45,5 +45,13 @@ public class MathController {
         return numOne * numOne * numOne;
     }
 
+    @GetMapping("/square-root/{numOne}")
+    @ResponseBody
+    public double squareRoot(@PathVariable float numOne){
+        return Math.sqrt(numOne);
+    }
+
+
+
 
 }
