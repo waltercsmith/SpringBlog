@@ -39,4 +39,11 @@ public class MathController {
         return numOne * numOne;
     }
 
+    @GetMapping("/cube/{numOne}")
+    @ResponseBody
+    public float cubed(@PathVariable float numOne){
+        return numOne * numOne * numOne;
+    }
+
+
 }
