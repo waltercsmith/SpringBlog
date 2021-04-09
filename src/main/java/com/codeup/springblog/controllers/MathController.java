@@ -41,8 +41,8 @@ public class MathController {
 
     @GetMapping("/cube/{numOne}")
     @ResponseBody
-    public float cubed(@PathVariable float numOne){
-        return numOne * numOne * numOne;
+    public double cubed(@PathVariable float numOne){
+        return Math.cbrt(numOne);
     }
 
     @GetMapping("/square-root/{numOne}")
