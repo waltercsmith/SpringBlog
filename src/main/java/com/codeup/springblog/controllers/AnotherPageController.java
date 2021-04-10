@@ -7,4 +7,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class AnotherPageController {
 
 
+    @GetMapping("/anotherpage")
+    public String anotherPage(){
+        return "Hey, it's another page! Welcome!";
+    }
+
 }
