@@ -61,6 +61,10 @@ public class MathController {
     @ResponseBody
     public double absoluteNum(@PathVariable double num){return Math.abs(num);}
 
+    @GetMapping("/round/{num}")
+    @ResponseBody
+    public double roundNum(@PathVariable double num){return Math.round(num);}
+
 
 
 
