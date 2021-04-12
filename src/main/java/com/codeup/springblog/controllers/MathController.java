@@ -51,6 +51,12 @@ public class MathController {
         return Math.sqrt(numOne);
     }
 
+    @GetMapping("/random")
+    @ResponseBody
+    public double randomNumTo100(){
+        return Math.random() * 100;
+    }
+
 
 
 
