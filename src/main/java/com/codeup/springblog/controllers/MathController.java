@@ -51,10 +51,12 @@ public class MathController {
         return Math.sqrt(numOne);
     }
 
-    @GetMapping("/random")
+    @GetMapping("/random/{num}")
     @ResponseBody
-    public double randomNumTo100(){
-        return Math.random() * 100;
+    public double randomNumToNum(@PathVariable double num){
+        String numDouble = String.format("%.2f", num);
+        double changeString = Double.parseDouble(numDouble);
+        return  Math.random() * changeString;
     }
 
     @GetMapping("/absolute/{num}")

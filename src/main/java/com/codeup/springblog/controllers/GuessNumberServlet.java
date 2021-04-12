@@ -30,20 +30,20 @@ public class GuessNumberServlet {
         return "The number you choose is: " + number;
     }
 
-    @GetMapping("/roll-dice/{number}")
-    @ResponseBody
-    public String guessNumberDouble(@PathVariable double number){
+//    @GetMapping("/roll-dice/{number}")
+//    @ResponseBody
+//    public String guessNumberDouble(@PathVariable double number){
+//
+//        return "The number you choose is: " + number;
+//    }
 
-        return "The number you choose is: " + number;
-    }
 
-
-    @PostMapping("/roll-dice/{number}")
-    @ResponseBody
-    public String guessNumberDoue(@PathVariable double number){
-
-        return "The number you choose is: " + number;
-    }
+//    @PostMapping("/roll-dice/{number}")
+//    @ResponseBody
+//    public String guessNumberDoue(@PathVariable double number){
+//
+//        return "The number you choose is: " + number;
+//    }
 
 
 }
