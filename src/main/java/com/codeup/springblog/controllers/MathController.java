@@ -54,9 +54,9 @@ public class MathController {
     @GetMapping("/random/{num}")
     @ResponseBody
     public double randomNumToNum(@PathVariable double num){
-        String numDouble = String.format("%.2f", num);
+        String numDouble = String.format("%.0f", num);
         double changeString = Double.parseDouble(numDouble);
-        return  Math.random() * changeString;
+        return  Math.random() * (int) changeString;
     }
 
     @GetMapping("/absolute/{num}")
