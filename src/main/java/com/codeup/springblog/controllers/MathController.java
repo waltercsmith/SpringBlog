@@ -57,6 +57,10 @@ public class MathController {
         return Math.random() * 100;
     }
 
+    @GetMapping("/absolute/{num}")
+    @ResponseBody
+    public double absoluteNum(@PathVariable double num){return Math.abs(num);}
+
 
 
 
