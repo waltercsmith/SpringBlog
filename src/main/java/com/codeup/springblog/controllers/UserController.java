@@ -10,9 +10,9 @@ public class UserController {
 
     @GetMapping("/profile")
     @ResponseBody
-    public String profile(){return "This is the profile page";}
+    public String profileTest(){return "This is the profile page";}
 
     @PostMapping("/profile")
-    public String profile(){return "profile";}
+    public String profilePageView(){return "profile";}
 
 }
