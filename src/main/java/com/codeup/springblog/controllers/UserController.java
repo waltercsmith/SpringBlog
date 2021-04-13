@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class UserController {
 
-    @GetMapping("/profile")
+    @GetMapping("/profile-test")
     @ResponseBody
     public String profileTest(){return "This is the profile page";}
 
