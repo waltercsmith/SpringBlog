@@ -12,7 +12,7 @@ public class UserController {
     @ResponseBody
     public String profileTest(){return "This is the profile page";}
 
-    @PostMapping("/profile")
+    @GetMapping("/profile")
     public String profilePageView(){return "profile";}
 
 }
