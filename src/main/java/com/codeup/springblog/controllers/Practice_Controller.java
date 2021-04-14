@@ -7,5 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class Practice_Controller {
 
     @GetMapping("/practice")
-
+    public String showFrame(){
+        return "practice/frame";
+    }
 }
