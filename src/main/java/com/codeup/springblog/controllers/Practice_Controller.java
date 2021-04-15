@@ -18,4 +18,9 @@ public class Practice_Controller {
         model.addAttribute("name", name);
         return "practice/frame";
     }
+
+    @GetMapping("/join")
+    public String showJoinForm(){
+        return "practice/join";
+    }
 }
