@@ -8,5 +8,11 @@
                 <h1>Joins</h1>
 
                     <h2 th:text="${cohort}"></h2>
+
+                        <form action="/join" method="post">
+                            <input type="text" name="cohort" id="cohort-ip" class="field">
+                            <button> Join</button>
+
+                        </form>
     </body>
 </html>
