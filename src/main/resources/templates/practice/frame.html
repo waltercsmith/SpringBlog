@@ -7,7 +7,11 @@
 <body>
         <h1>What's Up, <span th:text="${name}">Visitor</span>!</h1>
             <br>
+        <div>
+            <span th:if="${name.equalsIgnoreCase(Walt)}" style="color: #401180">Walt</span>
+            <span th:unless="${name.equalsIgnoreCase(Walt)}" style="color: #801145">The name <b>Walt</b> was not entered!</span>
 
+        </div>
 
 
 </body>
