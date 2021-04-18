@@ -8,21 +8,21 @@
         <h1>What's Up, <span th:text="${name}" style="background-color: cornflowerblue">Visitor</span>!</h1>
             <br>
 
-<!--        This code below only displays the second line in the div -->
-<!--        <div>-->
-<!--            <span th:if="${name.equalsIgnoreCase(Walt)}" style="color: #401180">Walt</span>-->
-<!--            <span th:unless="${name.equalsIgnoreCase(Walt)}" style="color: #801145">The name <b>Walt</b> was not entered!</span>-->
 
-<!--        </div>-->
 
             <div>
-                <p th:if="${name} == 'Walt'"> Hey <i> <span style="color: blueviolet"> Walter </span> </i> </p>
+                <p th:if="${name} == 'Walt'"> Hey <i> <span style="color: blueviolet"> Walter </span> </i> !</p>
 
             </div>
 
             <div>
 
-                <p th:if="${name} != 'Walt'">Aww... So you're not <b style="color: #c80730" > Walter! But Hey, <span th:text="${name}"></span> </b>!</p>
+                <p th:if="${name} != 'Walt'">Aww... So you're not <b style="color: #c80730" > Walter!
+                </b>!</p>
+
+                <p>
+                   It's still a pleasure to meet you,<strong> <span th:text="${name}"></span></strong>
+                </p>
 
 
             </div>
