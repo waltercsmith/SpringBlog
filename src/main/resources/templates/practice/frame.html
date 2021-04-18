@@ -5,8 +5,14 @@
     <title>Frame</title>
 </head>
 <body>
-        <h1>What's Up, <span th:text="${name}" style="background-color: cornflowerblue">Visitor</span>!</h1>
+        <h1>What's Up, <span th:if="${name} == null" style="background-color: cornflowerblue">Visitor</span>!</h1>
             <br>
+
+
+        <p> <span th:if="${name} == null"  style="color: darkorange">It's still a pleasure to meet you, <i>Visitor </i></span>
+
+
+        </p>
 
 
 
@@ -15,12 +21,17 @@
 
             </div>
 
+
+
             <div>
 
                 <p th:if="${name} != 'Walt'">Aww... So you're not <b style="color: #c80730" > Walter!
-                </b>!</p>
+                </b></p>
 
-                <p>
+
+
+
+                <p th:if="${name} != null" >
                    It's still a pleasure to meet you,<strong> <span th:text="${name}"></span></strong>
                 </p>
 
