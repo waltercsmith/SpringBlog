@@ -5,14 +5,14 @@
     <title>Frame</title>
 </head>
 <body>
-        <h1> <span th:if="${name} == null" style="background-color: cornflowerblue">What's Up, Visitor</span>!</h1>
+        <h1> <span th:if="${name} == null" style="background-color: cornflowerblue">What's Up, Visitor</span></h1>
             <br>
 
-        <p th:if="${name} != 'Walt'">Aww... So you're not
+        <h3 th:if="${name} != 'Walt'">Aww... So you're not
 
-           <h3> <b style="color: #c80730" > Walter!</b> </h3>
+           <h1> <b style="color: #c80730" > Walter!</b> </h1>
 
-        </p>
+        </h3>
 
             <br> <hr>
 
@@ -29,7 +29,10 @@
 
 
             <div>
-                <p th:if="${name} == 'Walt'"> Hey <i> <span style="color: blueviolet"> Walter </span> </i> !</p>
+                <h1 th:if="${name} == 'Walt'" style="color: blueviolet"> Hey Walter! <br>
+
+                    Welcome to the page!
+                </h1>
 
             </div>
 
