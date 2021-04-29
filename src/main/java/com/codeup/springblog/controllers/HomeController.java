@@ -34,6 +34,12 @@ public class HomeController {
 //    public String hello(){
 //        return ""
 //    }
+
+    @GetMapping("/hello/test")
+    @ResponseBody
+    public String hey() {
+        return "More text (testing purposes)";
+    }
 }
 
 
