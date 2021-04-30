@@ -32,6 +32,10 @@ public class Ad {
         this.title = title;
     }
 
+    public String getDescription(){
+        return description;
+    }
+
 //    public Long getId() {
 //        return id;
 //    }
