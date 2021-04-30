@@ -5,6 +5,10 @@
 //@Entity
 //@Table(name = "ads")
 public class Ad {
+
+    public Ad (){
+
+    }
 //    public Long getId() {
 //        return id;
 //    }
