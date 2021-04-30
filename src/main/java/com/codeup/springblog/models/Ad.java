@@ -13,6 +13,10 @@ public class Ad {
 
     private String title;
 
+    private String description;
+
+
+
 //    public Long getId() {
 //        return id;
 //    }
