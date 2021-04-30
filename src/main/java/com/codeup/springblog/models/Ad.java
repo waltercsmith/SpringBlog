@@ -4,7 +4,7 @@
 //
 //@Entity
 //@Table(name = "ads")
-//public class Ad {
+public class Ad {
 //    public Long getId() {
 //        return id;
 //    }
@@ -70,4 +70,4 @@
 //    public void setOwner(User owner) {
 //        this.owner = owner;
 //    }
-//}
+}
