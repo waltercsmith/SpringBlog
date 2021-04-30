@@ -9,6 +9,7 @@ public class Ad {
     public Ad (){
 
     }
+    private Long id;
 //    public Long getId() {
 //        return id;
 //    }
