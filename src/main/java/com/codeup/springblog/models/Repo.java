@@ -16,7 +16,7 @@ public class Repo {
 
     public Repo() {}
 
-    public Repo1() {}
+    public Repo(String title) {}
 
 
     public Repo(long id) {
