@@ -14,9 +14,10 @@ public class Repo {
     @Column(nullable = false, length = 720)
     private String content;
 
-    public Repo() {
+    public Repo() {}
 
-    }
+    public Repo1() {}
+
 
     public Repo(long id) {
         this.id = id;
