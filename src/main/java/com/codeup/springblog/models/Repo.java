@@ -23,7 +23,7 @@ public class Repo {
         this.id = id;
     }
 
-    public Repo(String content){ this.content}
+    public Repo(String content){ this.content = content}
 
 
     public Repo(String title, String content) {
