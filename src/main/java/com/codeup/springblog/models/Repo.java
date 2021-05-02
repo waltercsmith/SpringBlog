@@ -16,7 +16,7 @@ public class Repo {
 
     public Repo() {}
 
-    public Repo(String title) {this.title}
+    public Repo(String title) {this.title = title;}
 
 
     public Repo(long id) {
