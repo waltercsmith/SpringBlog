@@ -24,9 +24,9 @@ public class HomeController {
 
     @GetMapping("/hello/test")
     @ResponseBody
-    public String hey() {
-        return "More text (testing purposes)";
-    }
+//    public String hey() {
+//        return "More text (testing purposes)";
+//    }
 
 
 //    @GetMapping("hello")
@@ -35,11 +35,16 @@ public class HomeController {
 //        return ""
 //    }
 
-    @GetMapping("/hello/test")
-    @ResponseBody
-    public String hey() {
-        return "More text (testing purposes)";
+//    @GetMapping("/hello/test")
+//    @ResponseBody
+//    public String hey() {
+//        return "More text (testing purposes)";
+//    }
+//}
+
+    @GetMapping("/form")
+    public String form(){
+    return "practice/form";
     }
-}
 
 
