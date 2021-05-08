@@ -43,8 +43,10 @@ public class HomeController {
 //}
 
     @GetMapping("/form")
-    public String form(){
-    return "practice/form";
+    public String form() {
+        return "practice/form";
     }
+
+}
 
 
